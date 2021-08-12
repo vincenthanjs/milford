@@ -3,7 +3,7 @@
     <div class="branding">
       <a href="javascript:void(0)">
         <clr-icon shape="vm-bug"></clr-icon>
-        <span class="title">Project Clarity</span>
+        <span class="title">MLID</span>
       </a>
     </div>
   </header>
@@ -12,9 +12,9 @@
       <button class="btn btn-primary btn-sm" (click)="refresh()">Refresh</button>
 
       <clr-datagrid>
-        <clr-dg-column>User ID</clr-dg-column>
-        <clr-dg-column>First Name</clr-dg-column>
-        <clr-dg-column>Last Name</clr-dg-column>
+        <clr-dg-column>VMs</clr-dg-column>
+        <clr-dg-column>Location</clr-dg-column>
+        <clr-dg-column>Environment</clr-dg-column>
 
       
         <clr-dg-row *ngFor="let ctoa of ctoas">
@@ -23,7 +23,7 @@
           <clr-dg-cell>{{ctoa.last_name}}</clr-dg-cell>
         </clr-dg-row>
       
-        <clr-dg-footer><div *ngIf="ctoas">{{ctoas.length}} ctoas</div></clr-dg-footer>
+        <clr-dg-footer><div *ngIf="ctoas">{{ctoas.length}} VMs</div></clr-dg-footer>
       </clr-datagrid>
     </div>
   </div>

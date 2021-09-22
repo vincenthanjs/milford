@@ -3,7 +3,7 @@
     <div class="branding">
       <a href="javascript:void(0)">
         <clr-icon shape="vm-bug"></clr-icon>
-        <span class="title">MLID</span>
+        <span class="title">Multi Locations Intelligent Director</span>
       </a>
     </div>
   </header>
@@ -16,15 +16,73 @@
         <clr-dg-column>Location</clr-dg-column>
         <clr-dg-column>Environment</clr-dg-column>
 
-      
-        <clr-dg-row *ngFor="let ctoa of ctoas">
-          <clr-dg-cell>{{ctoa.id}}</clr-dg-cell>
-          <clr-dg-cell>{{ctoa.first_name}}</clr-dg-cell>
-          <clr-dg-cell>{{ctoa.last_name}}</clr-dg-cell>
+        <clr-dg-row>
+          <clr-dg-cell>web01</clr-dg-cell>
+          <clr-dg-cell>Singapore-DC-West</clr-dg-cell>
+          <clr-dg-cell>Production</clr-dg-cell>
+        </clr-dg-row>
+
+        <clr-dg-row>
+          <clr-dg-cell>app01</clr-dg-cell>
+          <clr-dg-cell>Singapore-DC-East</clr-dg-cell>
+          <clr-dg-cell>Production</clr-dg-cell>
+        </clr-dg-row>
+
+
+        <clr-dg-row>
+          <clr-dg-cell>admin</clr-dg-cell>
+          <clr-dg-cell>Singapore-DC-West</clr-dg-cell>
+          <clr-dg-cell>Dev-Test</clr-dg-cell>
+        </clr-dg-row>
+
+        <clr-dg-row>
+          <clr-dg-cell>Kiosk-Edge01</clr-dg-cell>
+          <clr-dg-cell>Singapore-Orchard-5G-Edge</clr-dg-cell>
+          <clr-dg-cell>Dev-Test</clr-dg-cell>
+        </clr-dg-row>
+
+        <clr-dg-row>
+          <clr-dg-cell>ocp-east-m66c5-worker-l5f85</clr-dg-cell>
+          <clr-dg-cell>Singapore-DC-West</clr-dg-cell>
+          <clr-dg-cell>Dev-Test</clr-dg-cell>
+        </clr-dg-row>
+
+        <clr-dg-row>
+          <clr-dg-cell>ocp-east-m66c5-master-0</clr-dg-cell>
+          <clr-dg-cell>Singapore-DC-East</clr-dg-cell>
+          <clr-dg-cell>Dev-Test</clr-dg-cell>
         </clr-dg-row>
       
-        <clr-dg-footer><div *ngIf="ctoas">{{ctoas.length}} VMs</div></clr-dg-footer>
+        <clr-dg-row>
+          <clr-dg-cell>ocp-east-m66c5-worker-87266</clr-dg-cell>
+          <clr-dg-cell>Singapore-DC-West</clr-dg-cell>
+          <clr-dg-cell>Dev-Test</clr-dg-cell>
+        </clr-dg-row>
+
+        <clr-dg-row>
+          <clr-dg-cell>ocp-east-m66c5-rhcos</clr-dg-cell>
+          <clr-dg-cell>Singapore-DC-East</clr-dg-cell>
+          <clr-dg-cell>Dev-Test</clr-dg-cell>
+        </clr-dg-row>
+      
+      
+      
+        <clr-dg-row *ngFor="let vm of vms">
+          <clr-dg-cell>{{vm.name}}</clr-dg-cell>
+          <clr-dg-cell>{{vm.location}}</clr-dg-cell>
+          <clr-dg-cell>{{vm.environment}}</clr-dg-cell>
+        </clr-dg-row>          
+        
+        <clr-dg-row *ngFor="let article of articles">
+          <clr-dg-cell>{{article.Title}}</clr-dg-cell>
+          <clr-dg-cell>{{article.desc}}</clr-dg-cell>
+          <clr-dg-cell>{{article.content}}</clr-dg-cell>
+        </clr-dg-row>   
+
+      
+        <clr-dg-footer><div *ngIf="vms">{{vms.length}} VMs</div></clr-dg-footer>
       </clr-datagrid>
+
     </div>
   </div>
 </div>
